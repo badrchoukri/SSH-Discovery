@@ -1,8 +1,7 @@
-# SSH-Discovery
-# SH-Auditor  
+# SSH-Discovery  
 **Network Recon & Authentication Auditing Tool**
 
-SH-Auditor is a high‑performance Python utility designed for **security auditing and network discovery**.  
+SSH-Discovery is a high‑performance Python utility designed for **security auditing and network discovery**.  
 It automates host discovery, SSH service detection, and credential validation with flexible wordlist support.
 
 ---
@@ -15,7 +14,7 @@ It automates host discovery, SSH service detection, and credential validation wi
 - **Stealth SSH Scanning**  
   Leverages **Scapy TCP SYN scans** to detect open SSH ports without completing a full TCP handshake.
 
-- **Automated Brute‑Force Testing**  
+- **Automated SSH Brute‑Force Testing**  
   Multi‑threaded authentication attempts using **Paramiko (SSHv2)**.
 
 - **Dynamic Credential Parsing**  
@@ -29,12 +28,6 @@ It automates host discovery, SSH service detection, and credential validation wi
     -D combo.txt -s 
     ```
     (Separator can be any character)
-
-- **Colorized Terminal Output**  
-  Clean ANSI‑colored feedback for:
-  - Successful logins
-  - Failed attempts
-  - Host / port status
 
 ---
 
