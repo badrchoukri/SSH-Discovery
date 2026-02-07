@@ -1,8 +1,9 @@
 # SSH-Discovery
-SSH Discovery & Credential Auditor
+SSH Discovery & Credential Auditor: 
+
 A streamlined Python utility for identifying active SSH services and performing automated credential validation.
 
-🔹 Key Features
+- Key Features
 Pre-Flight Checks: Performs ICMP pings and Scapy-based TCP SYN scanning to ensure the target is live and port 22 is open.
 
 Flexible Wordlists:
