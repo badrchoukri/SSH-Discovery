@@ -1,20 +1,61 @@
 # SSH-Discovery
-SSH Discovery & Credential Auditor: 
+# SH-Auditor 🔐  
+**Network Recon & Authentication Auditing Tool**
 
-A streamlined Python utility for identifying active SSH services and performing automated credential validation.
+SH-Auditor is a high‑performance Python utility designed for **security auditing and network discovery**.  
+It automates host discovery, SSH service detection, and credential validation with flexible wordlist support.
 
-- Key Features
-Pre-Flight Checks: Performs ICMP pings and Scapy-based TCP SYN scanning to ensure the target is live and port 22 is open.
+> ⚠️ **For educational and authorized security testing only.**
 
-Flexible Wordlists:
+---
 
-Fixed User: Target a specific user with a list of potential passwords.
+## 🚀 Features
 
-Combined Lists: Process username:password files using any custom separator (e.g., :, ;, or spaces).
+- **Host Discovery**  
+  Uses ICMP (Ping) to verify target availability before scanning.
 
-Visual Feedback: Uses ANSI color-coded output for clear "SUCCESS" vs. "FAILED" status updates.
+- **Stealth SSH Scanning**  
+  Leverages **Scapy TCP SYN scans** to detect open SSH ports without completing a full TCP handshake.
 
-Verbose Logging: Optional -v flag to track every login attempt in real-time.
+- **Automated Brute‑Force Testing**  
+  Multi‑threaded authentication attempts using **Paramiko (SSHv2)**.
+
+- **Dynamic Credential Parsing**  
+  Supports multiple wordlist formats:
+  - **Single User Mode**
+    ```bash
+    -u root -p passwords.txt
+    ```
+  - **Combined User:Password Mode**
+    ```bash
+    -D combo.txt -s :
+    ```
+    (Separator can be any character)
+
+- **Colorized Terminal Output**  
+  Clean ANSI‑colored feedback for:
+  - Successful logins
+  - Failed attempts
+  - Host / port status
+
+---
+
+## 🛠️ Technical Stack
+
+| Tool        | Purpose                                  |
+|------------|------------------------------------------|
+| Python 3   | Core logic                               |
+| Scapy      | Packet crafting & TCP SYN scanning       |
+| Paramiko   | SSHv2 protocol & authentication          |
+| Subprocess | System‑level network checks              |
+
+---
+
+## 📦 Installation
+
+```bash
+pip install scapy paramiko
+in attempt in real-time.
 
 🔹 Technical Overview
 The script follows a 3-step validation pipeline:
