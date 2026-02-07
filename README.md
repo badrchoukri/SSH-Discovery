@@ -58,3 +58,16 @@ python account_discovery.py -t 192.168.1.100 -D users_pass.txt -s :
 | -D            | Combined user:pass file                  |
 | -v            | Username/password separator              |
 | -s            | Verbose output                           |
+
+## install the script
+
+```bash
+git clone https://github.com/badrchoukri/SSH-Discovery.git
+```
+
+### Install Dependencies
+
+```bash
+pip install scapy paramiko
+```
+
