@@ -30,7 +30,10 @@ Bash
 git clone https://github.com/yourusername/ssh-auditor.git
 
 # Install dependencies
+```bash
 pip install scapy paramiko
-
+```
 # Example: Run an audit with a combined wordlist
+```bash
 python account_discovery.py -t 192.168.1.1 -D credentials.txt -s : -v
+```
