@@ -25,7 +25,7 @@ try:
         for (_,r) in ret :
             if r.haslayer(TCP) and r[TCP].flags == 0x12:
                 scan = True
-                SSHlogin(host,username,password,scan,v)
+                SSHlogin(host,username,password,v)
             else : 
                 print(RED+"the SSH are closed."+END)
                 sys.exit()
@@ -127,5 +127,6 @@ try:
 except InterruptedError:
     sys.exit()
         
+
 
 
