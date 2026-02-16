@@ -66,6 +66,8 @@ try:
         print(help_msg)
         sys.exit()
 
+    if "-t" in sys.argv:
+        host = sys.argv[sys.argv.index("-t") + 1]
 
     
     if "-v" in sys.argv:
@@ -125,4 +127,5 @@ try:
 except InterruptedError:
     sys.exit()
         
+
 
