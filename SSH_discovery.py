@@ -62,16 +62,10 @@ try:
     """
 
     
-    if "-h" in sys.argv[0]:
+    if "-h" in sys.argv:
         print(help_msg)
         sys.exit()
 
-    
-    if "-t" in sys.argv:
-        host = sys.argv[sys.argv.index("-t") + 1]
-    else:
-        print("Error: Target (-t) is required.")
-        sys.exit()
 
     
     if "-v" in sys.argv:
@@ -131,3 +125,4 @@ try:
 except InterruptedError:
     sys.exit()
         
+
